@@ -2,13 +2,13 @@
   "expo": {
     "name": "Quickbook",
     "slug": "Quickbook",
-    "scheme": "Quickbook",
+    "scheme": "quickbook",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "/assets/icons/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "/assets/icons/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,15 +17,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "/assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "updates": {
+      "enabled": false
+    }
   }
 }

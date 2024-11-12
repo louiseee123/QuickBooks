@@ -1,8 +1,8 @@
 # QuickBooks
-TechFolio Mobile App.
+The QuickBooks Mobile App.
 
 # Features
-* Share Projects
+* Loan Books
 * Message other developers
 * Rate others work
 * Search other developers

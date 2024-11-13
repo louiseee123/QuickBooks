@@ -2,10 +2,9 @@
 The QuickBooks Mobile App.
 
 # Features
-* Loan Books
-* Message other developers
-* Rate others work
-* Search other developers
+* Loan Books more efficiently.
+* Browse the Library remotely.
+* Set up book loaning apponments.
 
 # Course Overview
 * Basic React Native Components
@@ -19,13 +18,8 @@ The QuickBooks Mobile App.
 * HTML, CSS and JS
 
 # Home Screen
-<img src="assets/images/screenshot/onboarding.png">  
+<img src="assets/images/onboard.jpg">  
 
-# Sign Up Screen
-<img src="assets/images/screenshot/signup.png">  
+# Log In Screen
+<img src="assets/images/login.jpg">  
 
-# Sign In Screen
-<img src="assets/images/screenshot/login.png">  
-
-# Tabs Screen
-<img src="assets/images/screenshot/tabs.png">  

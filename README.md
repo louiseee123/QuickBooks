@@ -4,7 +4,7 @@ The QuickBooks Mobile App.
 # Features
 * Loan Books more efficiently.
 * Browse the Library remotely.
-* Set up book loaning apponments.
+* Set up book loaning appointments.
 
 # Course Overview
 * Basic React Native Components

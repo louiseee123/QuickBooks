@@ -27,5 +27,9 @@ The QuickBooks Mobile App.
 <img src="assets/images/signup.jpg">  
 
 # Tab Screen
-<img src="assets/images/tabs.jpg">  
+<img src="assets/images/home.jpg">  
+<img src="assets/images/book.jpg"> 
+<img src="assets/images/profile.jpg"> 
+<img src="assets/images/notif.jpg"> 
+
 

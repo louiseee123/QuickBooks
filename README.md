@@ -26,10 +26,17 @@ The QuickBooks Mobile App.
 # Sign Up Screen
 <img src="assets/images/signup.jpg">  
 
-# Tab Screen
+# Tab Screens
+# Home Tab
 <img src="assets/images/home.jpg">  
+
+# Book Browse Tab
 <img src="assets/images/book.jpg"> 
+
+# Profile Tab
 <img src="assets/images/profile.jpg"> 
+
+# Notifications Tab
 <img src="assets/images/notif.jpg"> 
 
 

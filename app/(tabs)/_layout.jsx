@@ -11,21 +11,32 @@ const Tab = createBottomTabNavigator();
 
 const TabIcon = ({ icon, iconFocused, focused, onPress }) => {
   const scaleValue = React.useRef(new Animated.Value(1)).current;
-  const bgColor = focused ? 'rgba(255, 255, 255, 0.8)' : 'transparent'; // Background color for focused state
+  const elevationValue = React.useRef(new Animated.Value(0)).current;
+  const bgColor = focused ? '#80C0E0' : '#004B9A'; // Solid colors for background
 
-  // Scale the icon when focused
+  // Scale and elevation animation when focused
   React.useEffect(() => {
-    Animated.spring(scaleValue, {
-      toValue: focused ? 1.4 : 1, // Scale up the icon on focus
-      useNativeDriver: true,
-      bounciness: 10,
-    }).start();
+    Animated.parallel([
+      Animated.spring(scaleValue, {
+        toValue: focused ? 1.3 : 1, // Scale up the icon on focus
+        useNativeDriver: true,
+        bounciness: 10,
+      }),
+      Animated.timing(elevationValue, {
+        toValue: focused ? 10 : 0, // Elevate icon on focus
+        duration: 200,
+        useNativeDriver: true,
+      }),
+    ]).start();
   }, [focused]);
 
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={[styles.tabIconContainer, { backgroundColor: bgColor }]}>
-        <Animated.View style={{ transform: [{ scale: scaleValue }] }}>
+        <Animated.View style={{ 
+          transform: [{ scale: scaleValue }], 
+          elevation: elevationValue 
+        }}>
           <Image
             source={focused ? iconFocused : icon}
             resizeMode="contain"
@@ -115,37 +126,35 @@ export default TabLayout;
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: 'linear-gradient(90deg, #007BB5, #005BB5)', // Gradient background
+    backgroundColor: '#007BB5', // Solid blue background for the tab bar
     height: 70,
     borderTopWidth: 1,
     borderTopColor: '#004B9A',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 8,
-    elevation: 8,
-    borderRadius: 25, // Slightly round the corners for a softer look
-    overflow: 'hidden',
-    position: 'absolute', // Fix positioning to avoid overlapping issues
-    bottom: 0,
-    left: 0,
-    right: 0,
-    paddingHorizontal: 20, // Add padding for more spacing
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 10,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    position: 'absolute',
+    bottom: 0, // Anchored to the bottom of the screen
+    left: 0,   // Full width alignment
+    right: 0,  // Full width alignment
+    paddingHorizontal: 0,
   },
   tabIconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'relative',
-    paddingVertical: 10,
-    borderRadius: 50, // Make circular for better aesthetics
-    marginHorizontal: 12, // Add margin for spacing between icons
-    height: 50, // Ensure enough height for the circle
-    width: 50, // Ensure enough width for the circle
-    backgroundColor: 'transparent',
-    elevation: 5, // Add slight shadow for depth
+    paddingVertical: 8,
+    borderRadius: 30, // Reduced border-radius for a flatter look
+    marginHorizontal: 10,
+    height: 50,
+    width: 50,
+    elevation: 5,
   },
   icon: {
-    width: 30,
-    height: 30,
+    width: 28,
+    height: 28,
   },
 });

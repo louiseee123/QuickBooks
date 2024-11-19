@@ -155,7 +155,7 @@ welcomeContainer: {
 },
 
 welcomeMessage: {
-    fontSize: 28, // Increased font size for more impact
+    fontSize: 20, // Increased font size for more impact
     fontWeight: 'bold',
     color: '#fff',
     textShadowColor: '#000', // Shadow color for text
@@ -186,7 +186,7 @@ welcomeMessage: {
 },
 
 date: {
-    fontSize: 24, // Increased font size for better visibility
+    fontSize: 15, // Increased font size for better visibility
     fontWeight: 'bold',
     color: '#fff',
     textShadowColor: '#000', // Adding shadow for depth
